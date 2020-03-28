@@ -16,13 +16,13 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "polar_accesslink"
-  s.version     = "1.0.0"
+  s.version     = "1.0.1"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["OpenAPI-Generator"]
   s.email       = ["b2bhelpdesk@polar.com"]
   s.homepage    = "https://openapi-generator.tech"
   s.summary     = "Polar Accesslink API Ruby Gem"
-  s.description = "Polar Accesslink API documentation"
+  s.description = "Polar Accesslink API Ruby Gem"
   s.license     = "Unlicense"
   s.required_ruby_version = ">= 1.9"
 
