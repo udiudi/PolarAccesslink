@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::UserExtraInfo.new(value: 2,
                                  index: 0,

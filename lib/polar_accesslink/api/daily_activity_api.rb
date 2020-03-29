@@ -156,6 +156,7 @@ module PolarAccesslink
       )
 
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
+
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DailyActivityApi#create_activity_transaction\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
@@ -228,6 +229,9 @@ module PolarAccesslink
       )
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      p data
+      p status_code
+
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: DailyActivityApi#get_activity_summary\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end

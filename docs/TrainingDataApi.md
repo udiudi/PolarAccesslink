@@ -29,9 +29,9 @@ After successfully retrieving training session data within a transaction, partne
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -82,9 +82,9 @@ Check for new training data and create a new transaction if found.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -134,9 +134,9 @@ Retrieve list of links to available samples in training session
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -190,9 +190,9 @@ Retrieve training session summary data
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -246,9 +246,9 @@ Retrieve exercise in FIT format. **Note!** This interface is in beta phase. If t
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -302,9 +302,9 @@ Retrieve training session summary data in GPX format
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -358,9 +358,9 @@ Retrieve heart rate zones in training session
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -414,9 +414,9 @@ Retrieve sample data of given type
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -472,9 +472,9 @@ Retrieve exercise in TCX format
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -528,9 +528,9 @@ After successfully initiating a transaction, training sessions included within i
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end

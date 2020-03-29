@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::ActivityStepSample.new(steps: null,
                                  time: 12:37:33.000)

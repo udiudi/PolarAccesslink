@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::TransactionLocation.new(transaction_id: 122,
                                  resource_uri: https://polaraccesslink.com/v3/users/21/physical-information-transactions/32)

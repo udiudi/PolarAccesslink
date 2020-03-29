@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::WebhookPing.new(timestamp: 2018-05-15T14:22:24Z,
                                  event: null)

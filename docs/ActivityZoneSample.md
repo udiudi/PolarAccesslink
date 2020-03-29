@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::ActivityZoneSample.new(activity_zones: null,
                                  time: null)

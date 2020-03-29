@@ -23,9 +23,9 @@ Create new webhook.  When creating webhook the Accesslink sends a ping message t
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
@@ -76,9 +76,9 @@ Delete webhook by id.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
@@ -128,9 +128,9 @@ Returns created webhook if exists.
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'
@@ -177,9 +177,9 @@ Edit webhook event types and/or url.  When updating webhook url the Accesslink s
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'

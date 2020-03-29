@@ -22,9 +22,9 @@ When partner wishes no longer to receive user data, user can be de-registered.Th
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -73,9 +73,9 @@ List user basic information. Note: Although it is possible to get users weight a
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -125,9 +125,9 @@ Once partner has been authorized by user, partner must register user before bein
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end

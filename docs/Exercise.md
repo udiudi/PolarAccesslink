@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::Exercise.new(id: 1937529874,
                                  upload_time: 2008-10-13T10:40:02.000Z,

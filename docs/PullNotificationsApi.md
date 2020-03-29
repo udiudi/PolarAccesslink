@@ -20,9 +20,9 @@ Get list of available exercises and activities for users
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure HTTP basic authorization: Basic
   config.username = 'YOUR USERNAME'
   config.password = 'YOUR PASSWORD'

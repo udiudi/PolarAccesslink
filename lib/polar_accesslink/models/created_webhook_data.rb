@@ -183,7 +183,7 @@ module PolarAccesslink
           end
         end
       else # model
-        OpenapiClient.const_get(type).build_from_hash(value)
+        PolarAccesslink.const_get(type).build_from_hash(value)
       end
     end
 

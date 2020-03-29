@@ -23,9 +23,9 @@ After successfully retrieving physical information within a transaction, partner
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -76,9 +76,9 @@ Initiate physical info transaction. Check for new physical info and create a new
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -128,9 +128,9 @@ Get physical info entity data
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end
@@ -184,9 +184,9 @@ List new physical info data. After successfully initiating a transaction, physic
 
 ```ruby
 # load the gem
-require 'openapi_client'
+require 'polar_accesslink'
 # setup authorization
-OpenapiClient.configure do |config|
+PolarAccesslink.configure do |config|
   # Configure OAuth2 access token for authorization: OAuth2
   config.access_token = 'YOUR ACCESS TOKEN'
 end

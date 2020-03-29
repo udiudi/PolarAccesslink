@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::Exercises.new(exercises: [&quot;https://www.polaraccesslink.com/v3/users/12/exercise-transactions/34/exercises/56&quot;,&quot;https://www.polaraccesslink.com/v3/users/12/exercise-transactions/34/exercises/120&quot;])
 ```

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::WebhookPayload.new(event: null,
                                  user_id: 475,

@@ -63,7 +63,7 @@ require 'polar_accesslink/api/webhooks_api'
 module PolarAccesslink
   class << self
     # Customize default settings for the SDK using block.
-    #   OpenapiClient.configure do |config|
+    #   PolarAccesslink.configure do |config|
     #     config.username = "xxx"
     #     config.password = "xxx"
     #   end

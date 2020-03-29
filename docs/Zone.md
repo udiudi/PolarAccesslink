@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::Zone.new(index: 1,
                                  lower_limit: 110,

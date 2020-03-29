@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::WebhookRequest.new(events: [&quot;EXERCISE&quot;,&quot;ACTIVITY_SUMMARY&quot;],
                                  url: https://myapp.example.com/acl_webhook)

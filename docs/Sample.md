@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Code Sample
 
 ```ruby
-require 'OpenapiClient'
+require 'PolarAccesslink'
 
 instance = PolarAccesslink::Sample.new(recording_rate: 5,
                                  sample_type: null,

@@ -237,7 +237,7 @@ module PolarAccesslink
         end
       else
         # models, e.g. Pet
-        OpenapiClient.const_get(return_type).build_from_hash(data)
+        PolarAccesslink.const_get(return_type).build_from_hash(data)
       end
     end
 
