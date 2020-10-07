@@ -1,6 +1,6 @@
 # PolarAccesslink::UsersApi
 
-All URIs are relative to *https://www.polaraccesslink.com*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,9 +9,7 @@ Method | HTTP request | Description
 [**register_user**](UsersApi.md#register_user) | **POST** /v3/users | Register user
 
 
-
-## delete_user
-
+# **delete_user**
 > delete_user(user_id)
 
 Delete user
@@ -19,18 +17,14 @@ Delete user
 When partner wishes no longer to receive user data, user can be de-registered.This will revoke the access token authorized by user.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::UsersApi.new
-user_id = 56 # Integer | User identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #Delete user
@@ -42,10 +36,9 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
@@ -53,40 +46,35 @@ nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_user_information
 
-> User get_user_information(user_id)
+# **get_user_information**
+> get_user_information(user_id)
 
 Get user information
 
 List user basic information. Note: Although it is possible to get users weight and height from this resource, the [get physical info](#get-physical-info) should be used instead.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::UsersApi.new
-user_id = 475 # Integer | User identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #Get user information
-  result = api_instance.get_user_information(user_id)
-  p result
+  api_instance.get_user_information(user_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling UsersApi->get_user_information: #{e}"
 end
@@ -94,73 +82,62 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
-[**User**](User.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## register_user
 
-> User register_user(register)
+# **register_user**
+> register_user
 
 Register user
 
 Once partner has been authorized by user, partner must register user before being able to access her data.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::UsersApi.new
-register = PolarAccesslink::Register.new # Register |
 
 begin
   #Register user
-  result = api_instance.register_user(register)
-  p result
+  api_instance.register_user
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling UsersApi->register_user: #{e}"
 end
 ```
 
 ### Parameters
-
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **register** | [**Register**](Register.md)|  |
+This endpoint does not need any parameter.
 
 ### Return type
 
-[**User**](User.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: application/xml, application/json
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
 

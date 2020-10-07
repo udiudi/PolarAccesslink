@@ -1,6 +1,6 @@
 # PolarAccesslink::DailyActivityApi
 
-All URIs are relative to *https://www.polaraccesslink.com*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -12,9 +12,7 @@ Method | HTTP request | Description
 [**list_activities**](DailyActivityApi.md#list_activities) | **GET** /v3/users/{user-id}/activity-transactions/{transaction-id} | List activities
 
 
-
-## commit_activity_transaction
-
+# **commit_activity_transaction**
 > commit_activity_transaction(transaction_id, user_id)
 
 Commit transaction
@@ -22,19 +20,16 @@ Commit transaction
 After successfully retrieving activity summary data within a transaction, partners are expected to commit the transaction.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::DailyActivityApi.new
-transaction_id = 56 # Integer | Transaction identifier
-user_id = 56 # Integer | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #Commit transaction
@@ -46,11 +41,10 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_id** | **Integer**| Transaction identifier |
- **user_id** | **Integer**| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
@@ -58,40 +52,35 @@ nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## create_activity_transaction
 
-> TransactionLocation create_activity_transaction(user_id)
+# **create_activity_transaction**
+> create_activity_transaction(user_id)
 
 Create transaction
 
 Initiate activity transaction. Check for new activity summaries and create a new transaction if found.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::DailyActivityApi.new
-user_id = 56 # Integer | User identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #Create transaction
-  result = api_instance.create_activity_transaction(user_id)
-  p result
+  api_instance.create_activity_transaction(user_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling DailyActivityApi->create_activity_transaction: #{e}"
 end
@@ -99,51 +88,47 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
-[**TransactionLocation**](TransactionLocation.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_activity_summary
 
-> Activity get_activity_summary(user_id, transaction_id, activity_id)
+# **get_activity_summary**
+> get_activity_summary(user_id, transaction_id, activity_id)
 
 Get activity summary
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::DailyActivityApi.new
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-activity_id = 56 # Integer | Activity summary identifier
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+activity_id = nil # Object | Activity summary identifier
+
 
 begin
   #Get activity summary
-  result = api_instance.get_activity_summary(user_id, transaction_id, activity_id)
-  p result
+  api_instance.get_activity_summary(user_id, transaction_id, activity_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling DailyActivityApi->get_activity_summary: #{e}"
 end
@@ -151,55 +136,51 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **activity_id** | **Integer**| Activity summary identifier |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **activity_id** | [**Object**](.md)| Activity summary identifier |
 
 ### Return type
 
-[**Activity**](Activity.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_step_samples
 
-> ActivityStepSamples get_step_samples(user_id, transaction_id, activity_id)
+# **get_step_samples**
+> get_step_samples(user_id, transaction_id, activity_id)
 
 Get step samples
 
 Get activity step samples. Example data can be seen from [appendix](#activity-step-time-series).
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::DailyActivityApi.new
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-activity_id = 56 # Integer | Activity summary identifier
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+activity_id = nil # Object | Activity summary identifier
+
 
 begin
   #Get step samples
-  result = api_instance.get_step_samples(user_id, transaction_id, activity_id)
-  p result
+  api_instance.get_step_samples(user_id, transaction_id, activity_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling DailyActivityApi->get_step_samples: #{e}"
 end
@@ -207,55 +188,51 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **activity_id** | **Integer**| Activity summary identifier |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **activity_id** | [**Object**](.md)| Activity summary identifier |
 
 ### Return type
 
-[**ActivityStepSamples**](ActivityStepSamples.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_zone_samples
 
-> ActivityZoneSamples get_zone_samples(user_id, transaction_id, activity_id)
+# **get_zone_samples**
+> get_zone_samples(user_id, transaction_id, activity_id)
 
 Get zone samples
 
 Get activity zone samples. Example data can be seen from [appendix](#activity-zone-time-series).
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::DailyActivityApi.new
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-activity_id = 56 # Integer | Activity summary identifier
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+activity_id = nil # Object | Activity summary identifier
+
 
 begin
   #Get zone samples
-  result = api_instance.get_zone_samples(user_id, transaction_id, activity_id)
-  p result
+  api_instance.get_zone_samples(user_id, transaction_id, activity_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling DailyActivityApi->get_zone_samples: #{e}"
 end
@@ -263,54 +240,49 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **activity_id** | **Integer**| Activity summary identifier |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **activity_id** | [**Object**](.md)| Activity summary identifier |
 
 ### Return type
 
-[**ActivityZoneSamples**](ActivityZoneSamples.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## list_activities
 
-> ActivityLog list_activities(transaction_id, user_id)
+# **list_activities**
+> list_activities(transaction_id, user_id)
 
 List activities
 
 List new activity data. After successfully initiating a transaction, activity summaries included within it can be retrieved with the provided transactionId.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::DailyActivityApi.new
-transaction_id = 56 # Integer | Transaction identifier
-user_id = 56 # Integer | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #List activities
-  result = api_instance.list_activities(transaction_id, user_id)
-  p result
+  api_instance.list_activities(transaction_id, user_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling DailyActivityApi->list_activities: #{e}"
 end
@@ -318,22 +290,23 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_id** | **Integer**| Transaction identifier |
- **user_id** | **Integer**| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
-[**ActivityLog**](ActivityLog.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
 

@@ -1,6 +1,6 @@
 # PolarAccesslink::PhysicalInfoApi
 
-All URIs are relative to *https://www.polaraccesslink.com*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,9 +10,7 @@ Method | HTTP request | Description
 [**list_physical_infos**](PhysicalInfoApi.md#list_physical_infos) | **GET** /v3/users/{user-id}/physical-information-transactions/{transaction-id} | List physical infos
 
 
-
-## commit_physical_info_transaction
-
+# **commit_physical_info_transaction**
 > commit_physical_info_transaction(transaction_id, user_id)
 
 Commit transaction
@@ -20,19 +18,16 @@ Commit transaction
 After successfully retrieving physical information within a transaction, partners are expected to commit the transaction.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::PhysicalInfoApi.new
-transaction_id = 56 # Integer | Transaction identifier
-user_id = 56 # Integer | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #Commit transaction
@@ -44,11 +39,10 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_id** | **Integer**| Transaction identifier |
- **user_id** | **Integer**| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
@@ -56,40 +50,35 @@ nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## create_physical_info_transaction
 
-> TransactionLocation create_physical_info_transaction(user_id)
+# **create_physical_info_transaction**
+> create_physical_info_transaction(user_id)
 
 Create transaction
 
 Initiate physical info transaction. Check for new physical info and create a new transaction if found.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::PhysicalInfoApi.new
-user_id = 56 # Integer | User identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #Create transaction
-  result = api_instance.create_physical_info_transaction(user_id)
-  p result
+  api_instance.create_physical_info_transaction(user_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling PhysicalInfoApi->create_physical_info_transaction: #{e}"
 end
@@ -97,53 +86,49 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
-[**TransactionLocation**](TransactionLocation.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_physical_info
 
-> PhysicalInformation get_physical_info(user_id, transaction_id, physical_info_id)
+# **get_physical_info**
+> get_physical_info(user_id, transaction_id, physical_info_id)
 
 Get physical info
 
 Get physical info entity data
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::PhysicalInfoApi.new
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-physical_info_id = 56 # Integer | Physical information identifier
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+physical_info_id = nil # Object | Physical information identifier
+
 
 begin
   #Get physical info
-  result = api_instance.get_physical_info(user_id, transaction_id, physical_info_id)
-  p result
+  api_instance.get_physical_info(user_id, transaction_id, physical_info_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling PhysicalInfoApi->get_physical_info: #{e}"
 end
@@ -151,54 +136,49 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **physical_info_id** | **Integer**| Physical information identifier |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **physical_info_id** | [**Object**](.md)| Physical information identifier |
 
 ### Return type
 
-[**PhysicalInformation**](PhysicalInformation.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## list_physical_infos
 
-> PhysicalInformations list_physical_infos(transaction_id, user_id)
+# **list_physical_infos**
+> list_physical_infos(transaction_id, user_id)
 
 List physical infos
 
 List new physical info data. After successfully initiating a transaction, physical infos included within it can be retrieved with the provided transactionId.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::PhysicalInfoApi.new
-transaction_id = 56 # Integer | Transaction identifier
-user_id = 56 # Integer | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #List physical infos
-  result = api_instance.list_physical_infos(transaction_id, user_id)
-  p result
+  api_instance.list_physical_infos(transaction_id, user_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling PhysicalInfoApi->list_physical_infos: #{e}"
 end
@@ -206,22 +186,23 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_id** | **Integer**| Transaction identifier |
- **user_id** | **Integer**| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
-[**PhysicalInformations**](PhysicalInformations.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
 

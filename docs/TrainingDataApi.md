@@ -1,6 +1,6 @@
 # PolarAccesslink::TrainingDataApi
 
-All URIs are relative to *https://www.polaraccesslink.com*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,9 +16,7 @@ Method | HTTP request | Description
 [**list_exercises**](TrainingDataApi.md#list_exercises) | **GET** /v3/users/{user-id}/exercise-transactions/{transaction-id} | List exercises
 
 
-
-## commit_exercise_transaction
-
+# **commit_exercise_transaction**
 > commit_exercise_transaction(transaction_id, user_id)
 
 Commit transaction
@@ -26,19 +24,16 @@ Commit transaction
 After successfully retrieving training session data within a transaction, partners are expected to commit the transaction.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::TrainingDataApi.new
-transaction_id = 56 # Integer | Transaction identifier
-user_id = 56 # Integer | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #Commit transaction
@@ -50,11 +45,10 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_id** | **Integer**| Transaction identifier |
- **user_id** | **Integer**| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
@@ -62,40 +56,35 @@ nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: Not defined
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## create_exercise_transaction
 
-> TransactionLocation create_exercise_transaction(user_id)
+# **create_exercise_transaction**
+> create_exercise_transaction(user_id)
 
 Create transaction
 
 Check for new training data and create a new transaction if found.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::TrainingDataApi.new
-user_id = 56 # Integer | User identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #Create transaction
-  result = api_instance.create_exercise_transaction(user_id)
-  p result
+  api_instance.create_exercise_transaction(user_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling TrainingDataApi->create_exercise_transaction: #{e}"
 end
@@ -103,53 +92,49 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
-[**TransactionLocation**](TransactionLocation.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_available_samples
 
-> Samples get_available_samples(user_id, transaction_id, exercise_id)
+# **get_available_samples**
+> get_available_samples(user_id, transaction_id, exercise_id)
 
 Get available samples
 
 Retrieve list of links to available samples in training session
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::TrainingDataApi.new
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-exercise_id = 56 # Integer | Exercise identifier
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+exercise_id = nil # Object | Exercise identifier
+
 
 begin
   #Get available samples
-  result = api_instance.get_available_samples(user_id, transaction_id, exercise_id)
-  p result
+  api_instance.get_available_samples(user_id, transaction_id, exercise_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling TrainingDataApi->get_available_samples: #{e}"
 end
@@ -157,55 +142,51 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **exercise_id** | **Integer**| Exercise identifier |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **exercise_id** | [**Object**](.md)| Exercise identifier |
 
 ### Return type
 
-[**Samples**](Samples.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_exercise_summary
 
-> Exercise get_exercise_summary(user_id, transaction_id, exercise_id)
+# **get_exercise_summary**
+> get_exercise_summary(user_id, transaction_id, exercise_id)
 
 Get exercise summary
 
 Retrieve training session summary data
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::TrainingDataApi.new
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-exercise_id = 56 # Integer | Exercise identifier
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+exercise_id = nil # Object | Exercise identifier
+
 
 begin
   #Get exercise summary
-  result = api_instance.get_exercise_summary(user_id, transaction_id, exercise_id)
-  p result
+  api_instance.get_exercise_summary(user_id, transaction_id, exercise_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling TrainingDataApi->get_exercise_summary: #{e}"
 end
@@ -213,55 +194,51 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **exercise_id** | **Integer**| Exercise identifier |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **exercise_id** | [**Object**](.md)| Exercise identifier |
 
 ### Return type
 
-[**Exercise**](Exercise.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_fit
 
-> String get_fit(user_id, transaction_id, exercise_id)
+# **get_fit**
+> get_fit(user_id, transaction_id, exercise_id)
 
 Get FIT (beta)
 
 Retrieve exercise in FIT format. **Note!** This interface is in beta phase. If there is anything we can help you with or you want to give us feedback, please contact [Support](#support).
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::TrainingDataApi.new
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-exercise_id = 56 # Integer | Exercise identifier
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+exercise_id = nil # Object | Exercise identifier
+
 
 begin
   #Get FIT (beta)
-  result = api_instance.get_fit(user_id, transaction_id, exercise_id)
-  p result
+  api_instance.get_fit(user_id, transaction_id, exercise_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling TrainingDataApi->get_fit: #{e}"
 end
@@ -269,55 +246,54 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **exercise_id** | **Integer**| Exercise identifier |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **exercise_id** | [**Object**](.md)| Exercise identifier |
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: */*
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_gpx
 
-> String get_gpx(user_id, transaction_id, exercise_id)
+# **get_gpx**
+> get_gpx(user_id, transaction_id, exercise_id, opts)
 
 Get GPX
 
 Retrieve training session summary data in GPX format
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::TrainingDataApi.new
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-exercise_id = 56 # Integer | Exercise identifier
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+exercise_id = nil # Object | Exercise identifier
+
+opts = {
+  include_pause_times: nil # Object | Whether to add pauses as part of the route. Default is false.
+}
 
 begin
   #Get GPX
-  result = api_instance.get_gpx(user_id, transaction_id, exercise_id)
-  p result
+  api_instance.get_gpx(user_id, transaction_id, exercise_id, opts)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling TrainingDataApi->get_gpx: #{e}"
 end
@@ -325,55 +301,52 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **exercise_id** | **Integer**| Exercise identifier |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **exercise_id** | [**Object**](.md)| Exercise identifier |
+ **include_pause_times** | [**Object**](.md)| Whether to add pauses as part of the route. Default is false. | [optional]
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/gpx+xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_heart_rate_zones
 
-> Zones get_heart_rate_zones(user_id, transaction_id, exercise_id)
+# **get_heart_rate_zones**
+> get_heart_rate_zones(user_id, transaction_id, exercise_id)
 
 Get heart rate zones
 
 Retrieve heart rate zones in training session
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::TrainingDataApi.new
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-exercise_id = 56 # Integer | Exercise identifier
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+exercise_id = nil # Object | Exercise identifier
+
 
 begin
   #Get heart rate zones
-  result = api_instance.get_heart_rate_zones(user_id, transaction_id, exercise_id)
-  p result
+  api_instance.get_heart_rate_zones(user_id, transaction_id, exercise_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling TrainingDataApi->get_heart_rate_zones: #{e}"
 end
@@ -381,56 +354,53 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **exercise_id** | **Integer**| Exercise identifier |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **exercise_id** | [**Object**](.md)| Exercise identifier |
 
 ### Return type
 
-[**Zones**](Zones.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_samples
 
-> Sample get_samples(type_id, user_id, transaction_id, exercise_id)
+# **get_samples**
+> get_samples(type_id, user_id, transaction_id, exercise_id)
 
 Get samples
 
 Retrieve sample data of given type
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::TrainingDataApi.new
-type_id = 'type_id_example' # String | Sample type id
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-exercise_id = 56 # Integer | Exercise identifier
+
+type_id = nil # Object | Sample type id
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+exercise_id = nil # Object | Exercise identifier
+
 
 begin
   #Get samples
-  result = api_instance.get_samples(type_id, user_id, transaction_id, exercise_id)
-  p result
+  api_instance.get_samples(type_id, user_id, transaction_id, exercise_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling TrainingDataApi->get_samples: #{e}"
 end
@@ -438,56 +408,52 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **type_id** | **String**| Sample type id |
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **exercise_id** | **Integer**| Exercise identifier |
+ **type_id** | [**Object**](.md)| Sample type id |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **exercise_id** | [**Object**](.md)| Exercise identifier |
 
 ### Return type
 
-[**Sample**](Sample.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## get_tcx
 
-> String get_tcx(user_id, transaction_id, exercise_id)
+# **get_tcx**
+> get_tcx(user_id, transaction_id, exercise_id)
 
 Get TCX
 
 Retrieve exercise in TCX format
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::TrainingDataApi.new
-user_id = 56 # Integer | User identifier
-transaction_id = 56 # Integer | Transaction identifier
-exercise_id = 56 # Integer | Exercise identifier
+
+user_id = nil # Object | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+exercise_id = nil # Object | Exercise identifier
+
 
 begin
   #Get TCX
-  result = api_instance.get_tcx(user_id, transaction_id, exercise_id)
-  p result
+  api_instance.get_tcx(user_id, transaction_id, exercise_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling TrainingDataApi->get_tcx: #{e}"
 end
@@ -495,54 +461,49 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **user_id** | **Integer**| User identifier |
- **transaction_id** | **Integer**| Transaction identifier |
- **exercise_id** | **Integer**| Exercise identifier |
+ **user_id** | [**Object**](.md)| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **exercise_id** | [**Object**](.md)| Exercise identifier |
 
 ### Return type
 
-**String**
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/vnd.garmin.tcx+xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 
-## list_exercises
 
-> Exercises list_exercises(transaction_id, user_id)
+# **list_exercises**
+> list_exercises(transaction_id, user_id)
 
 List exercises
 
 After successfully initiating a transaction, training sessions included within it can be retrieved with the provided transactionId.
 
 ### Example
-
 ```ruby
 # load the gem
 require 'polar_accesslink'
-# setup authorization
-PolarAccesslink.configure do |config|
-  # Configure OAuth2 access token for authorization: OAuth2
-  config.access_token = 'YOUR ACCESS TOKEN'
-end
 
 api_instance = PolarAccesslink::TrainingDataApi.new
-transaction_id = 56 # Integer | Transaction identifier
-user_id = 56 # Integer | User identifier
+
+transaction_id = nil # Object | Transaction identifier
+
+user_id = nil # Object | User identifier
+
 
 begin
   #List exercises
-  result = api_instance.list_exercises(transaction_id, user_id)
-  p result
+  api_instance.list_exercises(transaction_id, user_id)
 rescue PolarAccesslink::ApiError => e
   puts "Exception when calling TrainingDataApi->list_exercises: #{e}"
 end
@@ -550,22 +511,23 @@ end
 
 ### Parameters
 
-
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **transaction_id** | **Integer**| Transaction identifier |
- **user_id** | **Integer**| User identifier |
+ **transaction_id** | [**Object**](.md)| Transaction identifier |
+ **user_id** | [**Object**](.md)| User identifier |
 
 ### Return type
 
-[**Exercises**](Exercises.md)
+nil (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
-- **Accept**: application/json, application/xml
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
 

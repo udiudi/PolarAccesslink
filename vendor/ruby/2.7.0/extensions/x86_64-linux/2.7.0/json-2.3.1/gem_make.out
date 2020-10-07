@@ -1,0 +1,13 @@
+current directory: /home/udi/Development/polar-accesslink-gem/vendor/ruby/2.7.0/gems/json-2.3.1/ext/json
+/home/udi/.rvm/rubies/ruby-2.7.1/bin/ruby -I /home/udi/.rvm/rubies/ruby-2.7.1/lib/ruby/2.7.0 -r ./siteconf20201007-150686-1gvz1nw.rb extconf.rb
+creating Makefile
+
+current directory: /home/udi/Development/polar-accesslink-gem/vendor/ruby/2.7.0/gems/json-2.3.1/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/udi/Development/polar-accesslink-gem/vendor/ruby/2.7.0/gems/json-2.3.1/ext/json
+make "DESTDIR="
+make: Nothing to be done for 'all'.
+
+current directory: /home/udi/Development/polar-accesslink-gem/vendor/ruby/2.7.0/gems/json-2.3.1/ext/json
+make "DESTDIR=" install
