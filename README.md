@@ -1,4 +1,4 @@
-# swagger_client
+# PolarAccesslink
 
 PolarAccesslink - the Ruby gem for the Polar Accesslink API
 
@@ -32,7 +32,7 @@ or publish the gem to a gem hosting service, e.g. [RubyGems](https://rubygems.or
 
 Finally add this to the Gemfile:
 
-    gem 'swagger_client', '~> 1.0.0'
+    gem 'polar_accesslink', '~> 1.0.0'
 
 ### Install from Git
 
